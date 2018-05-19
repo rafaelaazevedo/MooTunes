@@ -1,4 +1,8 @@
+import mkdirp from 'mkdirp';
+
 const REPORTS_FOLDER = 'target/test-reports/';
+
+mkdirp(REPORTS_FOLDER);
 
 // TODO create other browser's configurations and parallel tests
 const chrome = {
