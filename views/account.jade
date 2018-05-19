@@ -1,0 +1,29 @@
+html
+    head
+        title Account Page
+        link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
+    body
+        div.container
+            h1(id='title') Account
+            a.btn.btn-primary(href="/", id='back') Back
+            h2(id='subtitle') Details
+            table.table(id='accounts')
+                tr
+                    td Name
+                    td(class='account-name') #{user.name}
+                tr
+                    td Email
+                    td(class='account-email')
+                        a(href="mailto:#{user.email}") #{user.email}
+                tr
+                    td Phone
+                    td(class='account-phone') #{user.phone}
+                tr
+                    td Website
+                    td(class='account-website')
+                        a(href="http://#{user.website}") #{user.website}
+                tr
+                    td Address
+                    td(class='account-address')
+                        a(href="http://maps.google.com/maps?q=#{user.address.geo.lat},#{user.address.geo.lng}") #{user.address.suite}, #{user.address.street} - #{user.address.city}
+    include footer

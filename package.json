@@ -1,0 +1,42 @@
+{
+  "name": "qa-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "babel-node index.js",
+    "automation": "concurrently --raw --kill-others \"npm run start\" \"webdriver-manager start\" \"sleep 5 && babel-node --presets es2015 -- ./node_modules/.bin/protractor protractor.config.js\"",
+    "update-webdriver": "./node_modules/.bin/webdriver-manager update update"
+  },
+  "author": "Calvin Mann <calvin@kodify.io>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.3",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "chai-string": "^1.4.0",
+    "concurrently": "^3.4.0",
+    "cucumber": "^4.2.1",
+    "eslint": "^4.19.1",
+    "eslint-plugin-flowtype": "^2.46.3",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.8.2",
+    "expect-to-be-a-promise": "^1.0.2",
+    "express": "^4.16.1",
+    "jade": "^1.11.0",
+    "lodash": "^4.17.10",
+    "protractor": "^5.0.2",
+    "protractor-cucumber-framework": "^5.0.0",
+    "sinon": "^5.0.7",
+    "sinon-chai": "^3.0.0",
+    "sync-request": "^6.0.0"
+  },
+  "devDependencies": {
+    "eslint-plugin-import": "^2.12.0"
+  }
+}
