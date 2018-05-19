@@ -61,7 +61,7 @@ typings/
 .next
 
 # target reports
-target/
+target/test-reports/*.*
 
 # ide
 .idea/
